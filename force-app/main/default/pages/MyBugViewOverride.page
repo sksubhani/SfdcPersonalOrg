@@ -1,0 +1,2 @@
+<apex:page standardController="MyBug__c" extensions="MyBugController" action="{!redirectView}">
+</apex:page>

@@ -1,0 +1,14 @@
+<apex:page controller="WrapperClassDemo">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!acctWrapperList}" var="w">
+                    <apex:column headerValue="Serial Number" > <apex:outputText value="{!w.serialNumber}"></apex:outputText> </apex:column>
+                    <apex:column headerValue="Select" > <apex:inputCheckbox value="{!w.checked}" /> </apex:column>
+                    <apex:column headerValue="Account Name" > <apex:outputText value="{!w.acctName}"></apex:outputText> </apex:column>
+                    <apex:column headerValue="Account Status"> <apex:outputText value="{!w.acctStatus}"></apex:outputText> </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+	</apex:form>        
+</apex:page>

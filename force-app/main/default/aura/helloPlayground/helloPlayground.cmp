@@ -1,0 +1,29 @@
+<aura:component >
+	
+    <aura:attribute name='messages' type='List' default="['Your are nice!', 'You look great!', 'How are you?']"></aura:attribute>
+    <br/>
+    <h2> Welcome to Components!</h2>
+    
+    <p>
+    	<ul>
+        	<li><c:helloMessage message="{!v.messages[0]}"></c:helloMessage></li>
+            <li><c:helloMessage message="{!v.messages[1]}"></c:helloMessage></li>
+            <li><c:helloMessage message="{!v.messages[2]}"></c:helloMessage></li>
+        </ul>
+    </p>
+    
+    <H2> Iteration Demo</H2>
+    <ul>
+    <aura:iteration items="{!v.messages}" var="msg">
+        <li><c:helloMessage message="{!msg}"></c:helloMessage></li>
+    </aura:iteration>
+    </ul>
+    
+    <h2> If - Else Demo </h2>
+    <aura:if isTrue="{!$Browser.isIPhone}">
+        <p><c:helloMessage message="{!v.messages[0]}"/></p>
+        <aura:set attribute="else">
+            <p><c:helloMessage message="{!v.messages[1]}"></c:helloMessage></p>
+        </aura:set>
+    </aura:if>
+</aura:component>

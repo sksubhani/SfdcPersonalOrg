@@ -1,0 +1,35 @@
+<apex:page controller="RerenderDemoController3" standardStylesheets="false" docType="html-5.0">
+    <apex:slds />
+    <apex:form id="thisForm">
+        <br/><br/>
+        <apex:outputPanel id="searchCriteria" rendered="{!displaySearchCriteria}">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                    <div class="slds-text-title_caps slds-line-height--reset">
+                		This is Search Criteria Section.
+                        <a class="slds-button slds-button_brand">Base Link</a>
+                    </div>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+		<apex:outputPanel id="searchResults" rendered="{!displaySearchResults}">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                    This is Search Results Section. <br/> 
+                    {!accts}
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+		<apex:outputPanel id="EditResult">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                	This is Edit Result Section.
+                    <apex:commandLink action="{!editSearchResult}">Edit</apex:commandLink>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+    </apex:form>
+</apex:page>

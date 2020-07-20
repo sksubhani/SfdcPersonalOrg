@@ -1,0 +1,6 @@
+<apex:page showHeader="false">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Hello World! You are seeing this because user clicked on a button which was overriden by visualforce page.</h1>
+  This is your new Page
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

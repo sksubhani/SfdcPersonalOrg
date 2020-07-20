@@ -1,0 +1,14 @@
+<apex:page name="RenewalNotebook" lightningStylesheets="true"  title="Renewal Notebook" 
+           controller="TestPageController" sidebar="false" id="thePage">
+
+    <apex:form id="thisForm">
+    	<apex:pageBlock >
+			<apex:pageBlockButtons >
+             	<apex:commandButton action="{!saveCriteria}" value="Save Criteria"/>
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+            	Notebook Id: <apex:outputLabel value="{!notebookId}"></apex:outputLabel>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

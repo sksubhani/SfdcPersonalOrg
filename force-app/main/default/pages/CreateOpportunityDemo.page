@@ -1,0 +1,14 @@
+<apex:page controller="SearchResultController">
+	<apex:form >
+    	<apex:pageBlock id="resultsPanel" title="Search Results">
+        	<apex:pageBlockSection >
+                <apex:pageBlockTable value="{!resultList}" var="result">
+                    <apex:column headerValue="Account ID" value="{!result.acctId}"/>
+                    <apex:column headerValue="Oppty">
+                        <apex:inputField value="{!result.oppty.Name}"/>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>        
+    </apex:form>
+</apex:page>

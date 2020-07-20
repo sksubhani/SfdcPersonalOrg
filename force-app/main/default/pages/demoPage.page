@@ -1,0 +1,8 @@
+<apex:page controller="DemoController">
+    
+	{!myString},
+    {!StringMethod1}, 
+    {!StringMethod2}, 
+    {!myString}
+
+</apex:page>

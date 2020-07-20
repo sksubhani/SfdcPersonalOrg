@@ -1,0 +1,25 @@
+<apex:page controller="OpenNewWindowDemoController">
+    <apex:form >
+        <apex:pageBlock >
+        	<!--<apex:commandButton value="Click" action="{!getUrl}" onComplete="window.open('{!theUrl}')"/> -->
+            <apex:commandButton value="Click" action="{!getUrl}" onComplete="openNewWindow();"/> <br/>
+            <apex:commandButton value="Google" onClick="window.open('www.google.com', '_blank');"/> <br/>
+            <apex:commandButton value="VF TestPage" onClick="window.open('TestPage', '_blank');"/> <br/>
+            <apex:commandButton value="Catch Return URL" onClick="openNewWindow2();"/> <br/>
+            <script>
+            	
+            	function openNewWindow() {
+                    var vfPage = '{!theUrl}';
+                    window.open(vfPage);
+                }
+
+            	function openNewWindow2() {
+                    var vfPage = '{!url}'; 
+                    alert('vfPage: ' + vfPage);
+                    
+                    window.open('/' + vfPage);
+                }
+            </script>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

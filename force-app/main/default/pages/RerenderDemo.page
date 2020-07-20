@@ -1,0 +1,31 @@
+<apex:page controller="RerenderDemoController" lightningstylesheets="true">
+    <apex:form id="thisForm">
+        <br/><br/>
+        <apex:outputPanel id="searchCriteria" rendered="{!displaySearchCriteria}">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                	This is Search Criteria Section. Page Load: {!pageLoad}, 
+                    User: <apex:outputText value="{!userName}"></apex:outputText> 
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+		<apex:outputPanel id="searchResults">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                	This is Search Results Section. {!accts}
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+		<apex:outputPanel id="EditResult">
+            <apex:pageBlock >
+            	<apex:pageBlockSection >
+                	This is Edit Result Section.
+                    <apex:commandLink action="{!editSearchResult}" reRender="searchCriteria">Edit</apex:commandLink>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<!--Usage: https://mysubha-dev-ed--sbn1.na59.visual.force.com/apex/accountCustomCtrlWithExtension?id=001f400000Fe0gB -->
+
+<apex:page standardController="Account" extensions="AccountControllerExtension">
+    <apex:form id="acctForm">
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Change Account Name" action="{!changeAcctName}"/>        
+            </apex:pageBlockButtons>
+        
+            <apex:pageBlockSection >
+                <apex:inputField id="acctNum" value="{!account.accountNumber}"/>
+                <apex:inputField id="acctname" value="{!account.name}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

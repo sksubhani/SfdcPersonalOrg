@@ -1,0 +1,11 @@
+<aura:component>
+    <aura:attribute name='name' type='string' default='Subhani'/>
+    <aura:attribute name='welcomeGuestList' type='string[]'/>
+
+    <!--Hello {!v.name}!-->
+
+    
+    <aura:iteration items="{!v.welcomeGuestList}" var="name">
+        Hello {!name} <br/>
+    </aura:iteration>
+</aura:component>

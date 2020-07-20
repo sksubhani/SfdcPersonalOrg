@@ -1,0 +1,33 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome" access="global">
+
+    <aura:attribute name="firstName" type="String"/>
+    <aura:attribute name="lastName" type="String"/>
+    <aura:attribute name="age" type="Integer"/>
+    <aura:attribute name="grade" type="String"/>
+    <aura:attribute name="mobileNumber" type="Integer"/>
+    <aura:attribute name="cityList" type="String[]" default="Select One, Los Angeles, Simi Valley, San Diego"/>
+    <aura:attribute name="selectedCity" type="String"/>
+    <aura:attribute name="demoStatus" type="Boolean" default="false"/>
+    <aura:attribute name="pageHeader" type="String" default="Registration Form"/>
+
+    <div class="slds-align_absolute-center">Registration Form</div>
+
+    <div class="slds-size-1-of-5">
+        <lightning:input label="First Name" name="firstName" value="{! v.firstName}"/>
+        <lightning:input label="Last Name" name="lastName" value="{! v.lastName}"/>
+        <lightning:input label="Age" name="age" value="{! v.age}"/>
+        <lightning:input label="Grade" name="grade" value="{! v.grade}"/>
+        <lightning:input label="Mobile Number" name="mobileNumber" value="{! v.mobileNumber}"/>
+        <br/>
+        
+        <lightning:input aura:id="demoStatus" label="Attended Demo Session?" type="checkbox" onchange="{! c.demoComplete}"/>
+        
+        <!--<lightning:select label="City" name="city" value="selectedCity">
+            <aura:iteration items="{!v.cityList}" var="city">
+                <option value="{!city}" text="{!city}"></option>
+            </aura:iteration>
+        </lightning:select>-->
+        <br/>
+        <lightning:button label="Submit" onclick="{!c.doSubmit}"></lightning:button>
+    </div>
+</aura:component>

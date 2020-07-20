@@ -1,0 +1,7 @@
+public class PostInstallScript implements InstallHandler {
+    public void onInstall(InstallContext context) {
+        DeployMetadata deployUtil = new DeployMetadata();
+        Metadata.DeployContainer container = deployUtil.constructDeploymentRequest();
+        deployUtil.deploy(container);
+    }
+}

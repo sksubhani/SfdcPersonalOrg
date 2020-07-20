@@ -1,0 +1,19 @@
+<apex:page controller="AccountsByRegionController">
+	<apex:form >
+        <apex:pageBlock title="Select Account Region">
+            <apex:pageBlockButtons >
+                    <apex:commandButton value="Get Accounts By Region" action="{!getAccountByRegion}" />
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection >
+                <apex:inputField value="{!account.Region__c}" ></apex:inputField>
+            </apex:pageBlockSection>
+		</apex:pageBlock>
+    </apex:form>
+    
+    <apex:pageBlock title="Accounts List" rendered="true">
+        Region: <apex:outputText value="{!account.Region__c}"></apex:outputText>
+        <apex:relatedList title="Accounts By Region" list="ss">
+        </apex:relatedList>
+    </apex:pageBlock>    
+</apex:page>

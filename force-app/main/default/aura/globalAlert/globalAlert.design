@@ -1,0 +1,4 @@
+<design:component >
+	<design:attribute name="alertTitle" label="Alert Title" description="Enter Alert Type"></design:attribute>
+	<design:attribute name="alertMessage" label="Alert Message" description="Enter the Alert Message"></design:attribute>
+</design:component>

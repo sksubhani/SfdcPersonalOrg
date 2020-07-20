@@ -1,0 +1,6 @@
+<design:component >
+	
+    <design:attribute name="pageHeader" label="Page Header Label" description="Page Header Description">
+    
+    </design:attribute>
+</design:component>

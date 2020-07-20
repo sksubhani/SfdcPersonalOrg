@@ -1,0 +1,8 @@
+<apex:page standardController="Contact" extensions="ContactControllerExtn">
+	<apex:pageBlock >
+    <apex:pageBlockSection >
+        Hello {!Contact.Name} <br/><br/>
+        Hello {!concatinatedContactName}
+    </apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:page>

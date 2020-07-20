@@ -1,0 +1,29 @@
+<aura:component implements="flexipage:availableForAllPageTypes" >
+
+	<aura:attribute name="num1"  type="Integer" description="Value 1" ></aura:attribute>
+	<aura:attribute name="num2"  type="Integer" description="Value 2" ></aura:attribute>
+	<aura:attribute name="result"  type="Integer" description="Result" ></aura:attribute>
+
+    <br/>
+    
+    <div class="slds-form-element">
+        <table class="">
+            <tr>
+            	<td>
+                    <ui:inputNumber label="Enter First Number"  aura:id="num1" value="{!v.num1}"  ></ui:inputNumber>
+        		</td>
+            	<td>
+                    <ui:inputNumber label="Enter Second Number" aura:id="num2" value="{!v.num2}"  ></ui:inputNumber>	
+                </td>
+            	<td>
+                    <ui:button label="Add" aura:id="buttonSum"></ui:button>
+                </td>                
+            </tr>
+        </table>
+        <br/>
+        <div class="result">
+        	<ui:outputNumber value="{!v.result}"  ></ui:outputNumber>
+        </div>
+        
+    </div>
+</aura:component>

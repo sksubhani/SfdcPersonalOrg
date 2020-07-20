@@ -1,0 +1,10 @@
+<aura:component implements="force.appHostable" >
+    <a class="slds-button" href="javascript:void(0);">Base Link</a>
+    <a class="slds-button slds-button_neutral" href="javascript:void(0);">Neutral Link</a>
+    <a class="slds-button slds-button_brand" href="javascript:void(0);">Brand Link</a>
+    <a class="slds-button slds-button_outline-brand" href="javascript:void(0);">Outline Brand Link</a>
+    <a class="slds-button slds-button_destructive" href="javascript:void(0);">Destructive Link</a>
+    <a class="slds-button slds-button_text-destructive" href="javascript:void(0);">Text Destructive Link</a>
+    <a class="slds-button slds-button_success" href="javascript:void(0);">Success Link</a>
+	<p>I am proficient in JavaScript</p>
+</aura:component>

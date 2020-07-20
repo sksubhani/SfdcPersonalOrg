@@ -1,0 +1,24 @@
+<aura:component controller="AccountController">
+    <aura:attribute name="account" type="Account"/>
+    <aura:attribute name="accounts" type="Account[]"/>
+    
+    <aura:handler name="retrieveAccounts" event="c:AccountsEvent" action="{!c.handleAccounts}"/>
+    <aura:registerEvent name="retrieveAccounts" type="c:AccountsEvent"/>
+    
+    <div>
+        <form>
+            <lightning:button label="Get Accounts"
+                              onclick="{!c.getAccts}"/>
+
+		</form>
+    </div>
+    
+    <p class="slds-page-header slds-page-header--object-home"> Accounts List</p>
+    <div>
+        <aura:iteration items="{!v.accounts}" var="acct">
+    		<p> ID: {!acct.Id} </p>
+        	<p> Name: {!acct.Name} </p>
+            <br/>
+		</aura:iteration>
+    </div>
+</aura:component>

@@ -1,0 +1,48 @@
+<apex:page showHeader="false" docType="html-5.0" sidebar="false" cache="false" controller="TestBootstrap">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>  
+  function pressButton()
+  {
+      var allSelected = '';
+          $("#selectId option:selected").each(function(){
+        allSelected+=allSelected!='' ? '; '+this.value : this.value;
+      });
+      alert(allSelected);
+      callFuncAF(allSelected);
+      return false;
+  }
+  </script>
+</head>
+<apex:form >
+
+<apex:actionfunction name="callFuncAF" action="{!callFunc}" rerender="refresh">
+   <apex:param name="selectedParam" assignTo="{!strSelectedValues}" value=""/>
+</apex:actionfunction>
+
+<div class="container">
+<apex:outputPanel id="refresh">
+<div class="form-group">
+<label class="control-label label-form" for="Attrib">Attrib<span class="mandatory"> *</span></label>
+<div class="input-group">
+    <div class="input-group-addon">
+        <span class="glyphicon glyphicon-pencil" aria-hidden="true"/>
+    </div>
+    <select multiple="multiple" class="form-control" id="selectId">
+        <option>Colour</option>
+        <option>Shape</option>
+        <option>Size</option>
+        <option>Weight</option>
+    </select>
+    <button id="pressId" onClick="return pressButton();">Submit</button>
+</div>
+</div>
+</apex:outputPanel>
+</div>
+</apex:form>
+</apex:page>

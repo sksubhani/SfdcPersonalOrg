@@ -1,0 +1,17 @@
+<!-- This page uses a Custom Controller which will access the Account details for given account id and updates them using custom methods.
+	 This will not use Standard Controller's methods. -->
+
+<apex:page controller="CustomControllerDemo">
+    <apex:form >
+        <apex:pageBlock >
+        	<apex:messages />
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!save}" value="Custom Save"/>
+			</apex:pageBlockButtons>
+
+            <apex:pageBlockSection >
+            	<apex:inputField value="{!myAccount.Name}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

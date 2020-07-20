@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>Registration form to enroll students into training program.</aura:description>
+	<aura:example name="registrationForm" ref="c:registrationForm" label="Registration Form">
+		HTML Exampl
+	</aura:example>
+</aura:documentation>

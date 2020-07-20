@@ -1,0 +1,16 @@
+<apex:page controller="PickListDemo" sidebar="false">
+    <b>Selected Fruit: {!fruit} </b> <br/>
+    <apex:form >
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+        	Select Fruit: <apex:selectList id="fruit" value="{!fruit}" size="1">
+                <apex:selectOption id="orange" itemValue="Orange"/>
+                <apex:selectOption id="lemon" itemValue="Lemon"/>
+                <apex:selectOption id="apple" itemValue="Apple"/>
+            </apex:selectList>
+            <apex:commandButton value="Submit" title="Submit" action="{!save}" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+	</apex:form>        
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page controller="MyController">
+	<apex:form >
+		<apex:pageBlock title="Account Details">
+        	<apex:pageBlockSection >                
+                You belong to Account: 
+                    <apex:inputField value="{!account.name}"></apex:inputField>
+            		<apex:commandButton value="Save" action="{!save}"/>  
+                
+        	</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

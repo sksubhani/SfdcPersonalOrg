@@ -1,0 +1,7 @@
+<apex:page controller="ExceptionDemoController" action="{!displayData}" lightningStylesheets="true">
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+			<apex:pageMessage rendered="{!error}" title="Error" severity="error" strength="3"></apex:pageMessage>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
